@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="647.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cl.duoc.veterinaria.controller.MascotaController">
+   <center>
+      <Pane prefHeight="400.0" prefWidth="668.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="labelChip" layoutX="42.0" layoutY="95.0" text="Chip" />
+            <Label fx:id="labelNombre" layoutX="32.0" layoutY="146.0" text="Nombre" />
+            <Label fx:id="labelFechaNacimiento" layoutX="8.0" layoutY="192.0" text="Fecha nacimiento" />
+            <TextField fx:id="textFieldChip" layoutX="109.0" layoutY="91.0" prefHeight="25.0" prefWidth="173.0" promptText="ingrese numero chip" />
+            <TextField fx:id="textFieldNombre" layoutX="107.0" layoutY="142.0" prefHeight="25.0" prefWidth="177.0" promptText="ingrese nombre" />
+            <DatePicker fx:id="datePickerFechaNacimiento" layoutX="107.0" layoutY="188.0" promptText="ingrese fecha nacimiento" />
+            <Button fx:id="buttonAgregar" layoutX="13.0" layoutY="283.0" mnemonicParsing="false" onAction="#agregarMascota" style="-fx-background-color: green;" text="Agregar" textFill="WHITE" />
+            <Label fx:id="labelTitulo" layoutX="14.0" layoutY="14.0" text="Registro Veterinaria">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="buttonEliminar" layoutX="100.0" layoutY="283.0" mnemonicParsing="false" onAction="#eliminarMascota" style="-fx-background-color: #bc2525;" text="Eliminar" textFill="WHITE" />
+            <Button fx:id="buttonModificar" layoutX="187.0" layoutY="283.0" mnemonicParsing="false" onAction="#modificarMascota" style="-fx-background-color: #e1e42d;" text="Modificar" />
+            <TableView fx:id="tableViewMascota" onMouseClicked="#seleccionarMascota" layoutX="292.0" layoutY="81.0" prefHeight="262.0" prefWidth="324.0">
+              <columns>
+                <TableColumn fx:id="tableColumnChip" prefWidth="81.0" text="Chip" />
+                <TableColumn fx:id="tableColumnNombre" prefWidth="100.0" text="Nombre" />
+                  <TableColumn fx:id="tableColumnFechaNacimiento" prefWidth="142.0" text="Fecha de Nacimiento" />
+              </columns>
+            </TableView>
+            <Label fx:id="labelMensaje" layoutX="18.0" layoutY="235.0" text="-" textFill="RED" />
+         </children>
+      </Pane>
+   </center>
+</BorderPane>
